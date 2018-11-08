@@ -14,7 +14,7 @@ func main() {
 	newServer()
 }
 
-func get(url string) []byte {
+func getUser(url string) []byte {
 	resp, err := http.Get(url)
 
 	if err != nil {
