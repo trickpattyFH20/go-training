@@ -20,8 +20,6 @@ func newServer() {
 
 		fmt.Fprintf(w, string(body))
 
-		w.WriteHeader(http.StatusOK)
-
 	}).Methods("GET", "POST")
 
 	server := negroni.Classic()
