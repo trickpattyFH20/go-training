@@ -11,11 +11,7 @@ import (
 )
 
 func main() {
-	body := get("https://reqres.in/api/users/1")
-
-	bodyToJSON(body)
-
-	saveToFile(body)
+	newServer()
 }
 
 func get(url string) []byte {
