@@ -9,7 +9,7 @@ import (
 
 func newServer() {
 	router := mux.NewRouter().StrictSlash(true)
-	router.HandleFunc("/getPerson", func(w http.ResponseWriter, r *http.Request) {
+	router.HandleFunc("/getUser", func(w http.ResponseWriter, r *http.Request) {
 		body := get("https://reqres.in/api/users/1")
 		bodyToJSON(body)
 		saveToFile(body)

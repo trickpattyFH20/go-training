@@ -33,13 +33,13 @@ func get(url string) []byte {
 }
 
 func bodyToJSON(body []byte) {
-	var person map[string]interface{}
-	jsonErr := json.Unmarshal(body, &person)
+	var user map[string]interface{}
+	jsonErr := json.Unmarshal(body, &user)
 
 	if jsonErr != nil {
 		panic(jsonErr)
 	}
-	fmt.Println(person["data"])
+	fmt.Println(user["data"])
 }
 
 func saveToFile(body []byte) {
